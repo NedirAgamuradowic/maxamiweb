@@ -63,8 +63,8 @@ select {
 
 input{
   outline: none;
-  padding: 1rem;
-  border: 1px solid $inputBorder;
+  border: none;
+  padding: .5rem;
   display: block;
   width: 100%;
 }

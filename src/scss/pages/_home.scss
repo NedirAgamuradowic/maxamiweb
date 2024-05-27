@@ -1,0 +1,32 @@
+.features{
+	.icon{
+		border: 1px solid;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $primary;
+		color: $white;
+		margin: 0 auto;
+	}
+	.box__heading{
+		color: $primary;
+	}
+}
+.team {
+	.box{
+		margin-top: 5rem;
+	}
+}
+.form{
+	margin-top: 3rem;
+
+	&__group{
+		margin-bottom: 1.5rem;
+	}
+	&__label{
+		text-transform: capitalize;
+		font-size: 1.7rem;
+	}
+}

@@ -65,8 +65,8 @@ select {
 
 input {
   outline: none;
-  padding: 1rem;
-  border: 1px solid rgb(221, 221, 221);
+  border: none;
+  padding: 0.5rem;
   display: block;
   width: 100%;
 }
@@ -98,7 +98,7 @@ p {
 }
 
 .section {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 8rem;
 }
 
 .overlay {
@@ -125,7 +125,7 @@ p {
 }
 
 .bg-primary {
-  background: rgb(2, 132, 208);
+  background: rgb(8, 90, 137);
   color: rgb(255, 255, 255);
 }
 
@@ -154,7 +154,7 @@ p {
 }
 
 .btn:hover {
-  background: rgb(2, 132, 208);
+  background: rgb(8, 90, 137);
   color: rgb(255, 255, 255);
 }
 
@@ -168,8 +168,13 @@ p {
   color: rgb(0, 0, 0);
 }
 
+.btn--light:hover {
+  background: rgb(0, 93, 62);
+  color: rgb(255, 255, 255);
+}
+
 .btn--primary {
-  background: rgb(2, 132, 208);
+  background: rgb(8, 90, 137);
   color: rgb(255, 255, 255);
 }
 
@@ -184,17 +189,24 @@ p {
 }
 
 .btn--outline:hover {
-  border-color: rgb(2, 132, 208);
+  border-color: rgb(8, 90, 137);
 }
 
 .btn--block {
   width: 100%;
   display: block;
   text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .text-primary {
-  color: rgb(2, 132, 208);
+  color: rgb(8, 90, 137);
+}
+
+.hide {
+  display: none;
 }
 
 .head {
@@ -228,6 +240,7 @@ p {
   }
   .flexbox .flexbox__content {
     flex-basis: 50%;
+    padding: 10rem 3rem;
   }
 }
 
@@ -265,13 +278,14 @@ p {
 }
 .box__circle {
   margin: 0 auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 .box__heading {
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
 }
 .box__text {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 @media (min-width:768px) {
   .box {
@@ -284,6 +298,7 @@ p {
   flex-direction: column;
   gap: 2rem;
   position: relative;
+  margin-top: 6rem;
 }
 .case__image {
   align-self: center;
@@ -330,7 +345,7 @@ p {
   cursor: pointer;
 }
 .brand__logo {
-  color: rgb(2, 132, 208);
+  color: rgb(8, 90, 137);
   font-size: 3.3rem;
   padding-right: 0.1rem;
 }
@@ -353,7 +368,7 @@ p {
   padding: 0.5rem 0.7rem;
 }
 .menu__link:hover {
-  border-bottom: 1px solid rgb(2, 132, 208);
+  border-bottom: 1px solid rgb(8, 90, 137);
 }
 @media (min-width:768px) {
   .menu__link {
@@ -422,7 +437,7 @@ p {
   padding-left: 1rem;
 }
 .footer__link:hover {
-  color: rgb(2, 132, 208);
+  color: rgb(8, 90, 137);
 }
 .footer__copy {
   margin-top: 1rem;
@@ -444,6 +459,7 @@ p {
 }
 .post__image {
   margin: 5rem auto;
+  width: 100%;
   max-width: 45rem;
 }
 @media (min-width:768px) {
@@ -474,4 +490,34 @@ p {
   .blog .content__desc {
     font-size: 1.9rem;
   }
+}
+
+.features .icon {
+  border: 1px solid;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(8, 90, 137);
+  color: rgb(255, 255, 255);
+  margin: 0 auto;
+}
+.features .box__heading {
+  color: rgb(8, 90, 137);
+}
+
+.team .box {
+  margin-top: 5rem;
+}
+
+.form {
+  margin-top: 3rem;
+}
+.form__group {
+  margin-bottom: 1.5rem;
+}
+.form__label {
+  text-transform: capitalize;
+  font-size: 1.7rem;
 }
