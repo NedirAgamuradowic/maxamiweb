@@ -1,0 +1,46 @@
+.hero{
+	padding-top: 143px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $dark url('../images/home/showcase.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	z-index: 20;
+
+	&__content{
+		text-align: center;
+		color: $white;
+		width: 80%;
+	}
+	&__heading{
+		text-transform: capitalize;
+		margin-bottom: 3rem;
+	}
+	&__tagline{
+		margin-bottom: 2rem;
+		opacity: .7;
+	}
+	
+
+	@media ($tablet){
+		&__heading{
+			font-size: 7rem;
+			margin-bottom: 4rem;
+		}
+		&__tagline{
+			font-size: 2.5rem;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.hero.home{
+	height: 100vh;
+}
+
+.hero.blog, .hero.post{
+	height: 60vh;
+}
