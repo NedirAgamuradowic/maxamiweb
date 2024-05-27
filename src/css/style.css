@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 10px;
 }
 
@@ -12,7 +14,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.6;
-  font-family: $font;
+  font-family: "Open Sans", sans-serif;
 }
 
 body,
@@ -48,7 +50,7 @@ img {
   display: block;
 }
 
-a{
+a {
   color: #333;
   text-decoration: none;
 }
@@ -60,21 +62,23 @@ select {
   font: inherit;
 }
 
-// typography
-
 h1, h2 {
   font-weight: 300;
   line-height: 1.2;
 }
-h1{
+
+h1 {
   font-size: 5.5rem;
 }
-h2{
+
+h2 {
   font-size: 4rem;
 }
-h3{
+
+h3 {
   font-size: 2rem;
 }
+
 p {
   margin: 1rem 0;
 }
