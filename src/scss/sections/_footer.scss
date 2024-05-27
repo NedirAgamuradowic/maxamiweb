@@ -1,0 +1,28 @@
+.footer{
+	background: $dark;
+	color: $white;
+	text-align: center;
+	padding: 5rem 0;
+
+	&__link{
+		color: $white;
+		font-size: 3rem;
+		padding-left: 1rem;
+
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__copy{
+		margin-top: 1rem;
+	}
+
+	@media ($tablet) {
+		&__link{
+			font-size: 4rem;
+		}
+		&__copy{
+			font-size: 1.8rem;
+		}
+	}
+}
