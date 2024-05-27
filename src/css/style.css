@@ -237,6 +237,7 @@ p {
 }
 .content--blog .content__heading {
   margin: 2rem 0 0.9rem;
+  text-transform: capitalize;
 }
 .content--blog .content__title {
   font-weight: 500;
@@ -336,6 +337,7 @@ p {
 .brand__name {
   font-size: 3.5rem;
   text-transform: capitalize;
+  color: rgb(255, 255, 255);
 }
 
 .menu {
@@ -437,14 +439,8 @@ p {
 .post__heading {
   text-transform: capitalize;
 }
-.post__icon {
-  padding-right: 1rem;
-}
 .post__author {
   font-size: 1.5rem;
-}
-.post__author time {
-  font-weight: 300;
 }
 .post__image {
   margin: 5rem auto;
@@ -456,5 +452,26 @@ p {
   }
   .post__image {
     margin: 7rem auto;
+  }
+}
+
+.blog .content__icon {
+  transform: translateY(7px);
+}
+.blog .content__title {
+  font-size: 1.45rem;
+}
+.blog .content__desc {
+  font-size: 1.7rem;
+}
+@media (min-width:768px) {
+  .blog .content__heading {
+    font-size: 5rem;
+  }
+  .blog .content__title {
+    font-size: 1.7rem;
+  }
+  .blog .content__desc {
+    font-size: 1.9rem;
   }
 }
