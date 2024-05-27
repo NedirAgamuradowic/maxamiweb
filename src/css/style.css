@@ -98,7 +98,7 @@ p {
 }
 
 .section {
-  padding: 2rem 2rem 4rem;
+  padding: 4rem 2rem;
 }
 
 .overlay {
@@ -326,6 +326,7 @@ p {
   align-items: center;
   margin-bottom: 1rem;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .brand__logo {
   color: rgb(2, 132, 208);
@@ -430,5 +431,30 @@ p {
   }
   .footer__copy {
     font-size: 1.8rem;
+  }
+}
+
+.post__heading {
+  text-transform: capitalize;
+}
+.post__icon {
+  padding-right: 1rem;
+}
+.post__author {
+  font-size: 1.5rem;
+}
+.post__author time {
+  font-weight: 300;
+}
+.post__image {
+  margin: 5rem auto;
+  max-width: 45rem;
+}
+@media (min-width:768px) {
+  .post__author {
+    font-size: 1.7rem;
+  }
+  .post__image {
+    margin: 7rem auto;
   }
 }
