@@ -399,7 +399,7 @@ p {
   background-size: cover;
 }
 
-.hero.blog, .hero.post {
+.hero.blog {
   height: 45vh;
   background: rgb(51, 51, 51) url("../images/home/blog.jpg");
   background-repeat: no-repeat;
