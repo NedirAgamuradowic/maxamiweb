@@ -12,7 +12,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font;
 }
 
 body,
@@ -58,4 +58,15 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+// typography
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1rem 0;
 }
