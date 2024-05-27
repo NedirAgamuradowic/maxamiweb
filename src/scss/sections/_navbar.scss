@@ -1,0 +1,62 @@
+.navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $darkOpacity;
+	padding: 2rem 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	@media ($tablet) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: .8rem 1.5rem;
+	}
+}
+
+// brand
+.brand{
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+
+	&__logo{
+		color: $primary;
+		font-size: 3.3rem;
+		padding-right: .1rem;
+	}
+	&__name{
+		font-size: 3.5rem;
+		text-transform: capitalize;
+	}
+	
+}
+
+// menu
+.menu{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		text-transform: capitalize;
+	}
+
+	&__link{
+		display: inline-block;
+		padding: .5rem .7rem;
+
+		&:hover{
+			border-bottom: 1px solid $primary;
+		}
+	}
+
+
+	@media ($tablet){
+		&__link{
+			font-size: 1.8rem;
+			padding: 1rem 1.5rem;
+		}
+	}
+}
