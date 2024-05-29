@@ -7,21 +7,15 @@ const browserSync = require('browser-sync').create();
 // gulp plugins
 const plumber = require('gulp-plumber');
 const htmlmin = require('gulp-htmlmin');
-const webpHTML = require('gulp-webp-html');
 const sass = require('gulp-sass')(require('sass'));
 const csso = require('gulp-csso');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const shorthand = require('gulp-shorthand');
 const groupCssMediaQueries = require('gulp-group-css-media-queries');
-const webpCss = require('gulp-webp-css');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const webp = require('gulp-webp');
-const fonter = require('gulp-fonter');
-const ttf2woff2 = require('gulp-ttf2woff2');
 
 
 // path
@@ -104,7 +98,6 @@ const clear = () =>{
 function html() {
 	return src(path.html.src)
 	.pipe(plumber())
-	.pipe(webpHTML())
 	.pipe(htmlmin(config.html))
 	.pipe(dest(path.html.dest))
 	.pipe(browserSync.stream())
@@ -115,7 +108,6 @@ function scss() {
 	return src(path.scss.src, config.sourcemaps)
 	.pipe(plumber())
 	.pipe(sass())
-	.pipe(webpCss())
 	.pipe(autoprefixer())
 	.pipe(shorthand())
 	.pipe(groupCssMediaQueries())
@@ -125,16 +117,6 @@ function scss() {
 	.pipe(dest(path.scss.dest))
 	.pipe(browserSync.stream())
 };
-
-// javascript
-function js() {
-	return src(path.js.src, config.sourcemaps)
-	.pipe(plumber())
-	.pipe(babel(config.babel))
-	.pipe(uglify())
-	.pipe(dest(path.js.dest))
-	.pipe(browserSync.stream())
-}
 
 // image
 function image() {
@@ -150,25 +132,11 @@ function image() {
 	.pipe(browserSync.stream())
 }
 
-
-// font
-function font() {
-	return src(path.font.src)
-	.pipe(plumber())
-	.pipe(newer(path.font.dest))
-	.pipe(fonter(config.fonter))
-	.pipe(dest(path.font.dest))
-	.pipe(ttf2woff2())
-	.pipe(dest(path.font.dest));
-}
-
 // watch task
 function watcher() {
 	watch(path.html.watch, html)
 	watch(path.scss.watch, scss)
-	watch(path.js.watch, js)
-	watch(path.img.watch, image)
-	watch(path.font.watch, font);
+	watch(path.img.watch, image);
 }
 
 // browsersync server
@@ -177,7 +145,7 @@ function server() {
 }
 
 // build project
-const build = series(clear, parallel(html, scss, js, image, font));
+const build = series(clear, parallel(html, scss, image));
 
 // development
 const development = series(build,  parallel(watcher, server));
@@ -187,9 +155,7 @@ const development = series(build,  parallel(watcher, server));
 exports.clear = clear;
 exports.html = html;
 exports.scss = scss;
-exports.js = js;
 exports.image = image;
-exports.font = font;
 exports.watch = watcher;
 
 

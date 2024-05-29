@@ -78,6 +78,9 @@
 	background: $primary;
 	color: $white;
 }
+.btn--primary:hover{
+	background: $secondary;
+}
 .btn--secondary{
 	background: $secondary;
 	color: $white;

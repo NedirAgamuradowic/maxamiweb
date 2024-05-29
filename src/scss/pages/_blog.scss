@@ -1,6 +1,7 @@
 .blog{
 	.content__icon{
-		transform: translateY(7px);
+		position: relative;
+		top: -2px;
 	}
 	.content__title{
 		font-size: 1.45rem;
